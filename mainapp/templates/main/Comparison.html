@@ -3,6 +3,37 @@
 {% load static %}
 {% block content %}
 
+<h3>Compare</h3>
 
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box-element">
+            <a class="btn btn-outline-dark" href="{% url 'properties' %}">&#x2190; Continue browsing properties</a>
+            <br>
+            <br>
+        </div>
+        <div class="box-element">
+            <div class="cart-row">
+                <div style="flex: 2;"></div>
+                <div style="flex: 2;"><strong>Name</strong></div>
+                <div style="flex: 1;"><strong>Beds</strong></div>
+                <div style="flex: 1;"><strong>Baths</strong></div>
+                <div style="flex: 1;"><strong>Price (INR/month)</strong></div>
+                <div style="flex: 1;"></div>
+            </div>
+
+            <div class="cart-row">
+                <div style="flex: 2;">
+                    <img class="row-image" src="{% static 'images/placeholder.png' %}">
+                </div>
+                <div style="flex: 2;">Hostel1</div>
+                <div style="flex: 1;">2</div>
+                <div style="flex: 1;">2</div>
+                <div style="flex: 1;">3000</div>
+                <div style="flex: 1;"><button class="btn btn-outline-secondary">Remove</button></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
