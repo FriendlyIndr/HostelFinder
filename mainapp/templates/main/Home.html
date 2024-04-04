@@ -5,37 +5,20 @@
 
 
 <div class="row">
+    {% for hostel in hostels %}
     <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+        <img class="thumbnail" src="{{hostel.image.url}}">
         <div class="box-element product">
-            <h6><strong>Hostel1</strong></h6>
+            <h6><strong>{{hostel.name}}</strong></h6>
             <hr>
             <button class="btn btn-outline-secondary">Add to comparison</button>
             <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right;"><strong>3000 INR</strong></h4>
+            <h4 style="display: inline-block; float: right;"><strong>{{hostel.price}} INR</strong></h4>
         </div>
 
     </div>
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
-        <div class="box-element product">
-            <h6><strong>Hostel1</strong></h6>
-            <hr>
-            <button class="btn btn-outline-secondary">Add to comparison</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right;"><strong>3000 INR</strong></h4>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
-        <div class="box-element product">
-            <h6><strong>Hostel1</strong></h6>
-            <hr>
-            <button class="btn btn-outline-secondary">Add to comparison</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block; float: right;"><strong>3000 INR</strong></h4>
-        </div>
-    </div>
+    {% endfor %}
+    
 </div>
 
 {% endblock content %}
