@@ -22,18 +22,21 @@
                 <div style="flex: 1;"></div>
             </div>
 
+            {% for hostel in hostels %}
             <div class="cart-row">
                 <div style="flex: 2;">
-                    <img class="row-image" src="{% static 'images/placeholder.png' %}">
+                    <img class="row-image" src="{{hostel.image.url}}">
                 </div>
-                <div style="flex: 2;">Hostel1</div>
-                <div style="flex: 1;">2</div>
-                <div style="flex: 1;">2</div>
-                <div style="flex: 1;">3000</div>
+                <div style="flex: 2;">{{hostel.name}}</div>
+                <div style="flex: 1;">{{hostel.beds}}</div>
+                <div style="flex: 1;">{{hostel.baths}}</div>
+                <div style="flex: 1;">{{hostel.price}}</div>
                 <div style="flex: 1;"><button class="btn btn-outline-secondary">Remove</button></div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
+
 
 {% endblock content %}
